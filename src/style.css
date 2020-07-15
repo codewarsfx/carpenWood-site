@@ -203,8 +203,10 @@ header {
   padding: 0 5px;
 }
 .about-content-stats {
-  width: 453px;
-  height: 112px;
+  /* width: 453px;
+  
+  height: 112px; */
+  padding: 1.5em 0;
   margin-top: 4rem;
   background: rgba(84, 75, 69, 0.05);
   display: flex;
@@ -500,6 +502,7 @@ footer {
     height: 50px;
     font-size: 18px;
   }
+
   .content,
   .section__services {
     flex-direction: column;
@@ -513,9 +516,10 @@ footer {
     font-size: 18px;
     hyphens: auto;
     text-align: center;
+    margin-bottom: 20px;
   }
   .about-content-stats {
-    margin: 2rem auto 2rem;
+    margin: 0 auto 2rem;
   }
   .about-content-stats-1,
   .section-form-input {
@@ -581,9 +585,9 @@ footer {
     margin-top: 0;
   }
   .section-form-input-text {
-    width: 400px;
+    width: 300px;
   }
   .section-form-area {
-    width: 400px;
+    width: 300px;
   }
 }
