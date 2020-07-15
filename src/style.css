@@ -340,6 +340,148 @@ header {
   color: #8c7d73;
   margin: auto;
 }
-/* * {
-  border: 1px solid red;
-} */
+.intersection {
+  padding: 30px 0;
+  background: url(../Assets/images/cool.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 88px;
+  position: relative;
+}
+.intersection p {
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  font-family: Pacifico;
+  font-weight: normal;
+  font-size: 36px;
+  letter-spacing: 0.055em;
+  text-align: center;
+  color: #f9ece3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.intersection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 25, 23, 0.6);
+}
+.team-gallery {
+  display: flex;
+  justify-content: space-around;
+}
+.team-gallery-card {
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.11);
+}
+.team-gallery-paragraph {
+  background: #ffffcc;
+  text-align: center;
+}
+.team-gallery-paragraph h3 {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 39px;
+  color: #544b45;
+  margin: 0 0 5px 0;
+}
+
+.team-gallery-paragraph p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  color: #8c7d73;
+}
+.section-heading-mod {
+  margin: 0;
+}
+.about-content-p--mod {
+  margin: 0;
+}
+.section-map {
+  display: flex;
+  justify-content: center;
+}
+.section-map-container {
+  position: relative;
+  background-color: yellow;
+}
+.section-map-container img {
+  width: 100%;
+  height: 100%;
+}
+.section-map-container .overlary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(243, 211, 74, 0.33);
+}
+footer {
+  background-color: #f3d34a;
+  height: 154px;
+  margin-top: 136px;
+}
+
+.section-form {
+  display: flex;
+  justify-content: center;
+}
+.section-form form > * {
+  margin-top: 35px;
+}
+.section-form-input-text,
+.section-form-area {
+  background: #ffffff;
+  border: 3px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+.section-form-area::placeholder,
+.section-form-input-text::placeholder {
+  font-family: var(--body-font);
+  font-size: 18px;
+  color: #666;
+}
+.section-form-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-form-input-text {
+  width: 347px;
+  height: 60px;
+}
+.section-form-area {
+  display: block;
+  width: 732px;
+  height: 190px;
+}
+
+.button-form {
+  width: 215px;
+  height: 73px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29px;
+  border: none;
+  color: #e9e9e9;
+  background: #c07945;
+  border-radius: 5px;
+}
+.wrapper--sec > * {
+  margin-top: 100px;
+}
+.about-content-p--mod {
+  margin: 2em 0;
+  text-align: center;
+}
