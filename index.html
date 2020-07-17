@@ -252,5 +252,76 @@
       </section>
     </div>
     <footer></footer>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>Loading...
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+    <script>
+      const chi = () => {
+        var timeline = gsap.timeline();
+        timeline
+          .fromTo(
+            '.header_logo,.header_nav,.social-links',
+            { y: -50, opacity: 0 },
+            { y: 0, opacity: 1, stagger: 0.3, delay: 0.2 }
+          )
+          .from('.hero-heading', { opacity: 0, duration: 0.3, ease: 'back' })
+          .fromTo(
+            '.hero-heading-secondary',
+            { y: 20, opacity: 0 },
+            { y: 0, opacity: 1 },
+            '-=0.2'
+          )
+          .from('.hero-cta', { opacity: 0 });
+
+        var about = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.about-content',
+            markers: true,
+            start: 'top 60%',
+            end: 'bottom 300px',
+            onLeaveBack: 'restart',
+          },
+        });
+        about
+          .from('.about-content', {
+            x: -150,
+            opacity: 0,
+            ease: 'back',
+            duration: 0.5,
+          })
+          .from(
+            '.about-image',
+            { x: 150, opacity: 0, ease: 'back', duration: 0.5 },
+            '-<0.5'
+          )
+          .from(
+            '.about-content-stats',
+            { opacity: 0, y: 100, ease: 'back' },
+            '-=0.2'
+          );
+        var timeline2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.services',
+            markers: true,
+            start: 'top 50%',
+            end: 'bottom 300px',
+          },
+        });
+        timeline2.from('.section__services__card,.team-gallery-card', {
+          y: 150,
+          opacity: 0,
+          stagger: 0.2,
+        });
+        gsap.from('.grid-image', { opacity: 0, stagger: 0.2 });
+      };
+    </script>
+    <script>
+      window.addEventListener('load', () => {
+        gsap.to('.loader-wrapper', { opacity: 0 });
+        chi();
+      });
+    </script>
   </body>
 </html>
